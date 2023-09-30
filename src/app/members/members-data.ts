@@ -145,28 +145,11 @@ export const members: TMember[] = [
   },
   {
     name: "Makoto Nakai",
-    role: "M2",
+    roles: ["M2", "Communication Engineer"],
     login: "dave",
     imagePath: "/images/members/dave.png",
     description: "I'm a student at Keio University",
     links: [{ name: "Github", url: "https://github.com/makotonakai" }],
-    stat: [
-      { name: "Strength", value: 20, max: 100 },
-      { name: "Agility", value: 30, max: 100 },
-      { name: "Intelligence", value: 50, max: 100 },
-      { name: "Luck", value: 10, max: 100 },
-    ],
-  },
-  {
-    name: "Makoto Nakai",
-    roles: ["M2", "Communication Engineer"],
-    login: "dave",
-    imagePath: "/images/members/dave.png",
-    description: "Subspace communication is my life",
-    links: [
-      { name: "Linkedin", url: "" },
-      { name: "Github", url: "" },
-    ],
     stat: [
       { name: "Strength", value: 20, max: 100 },
       { name: "Agility", value: 30, max: 100 },
