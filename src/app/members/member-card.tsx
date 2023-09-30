@@ -14,11 +14,30 @@ const MemberCard = ({ member }: { member: TMember }) => (
       alt={member.name}
     />
     <div className="text-xl font-bold">{member.name}</div>
-    <div className="text-xl font-bold">{member.login}</div>
-    <div className="badge badge-primary rounded-full font-bold">
-      {member.role}
+    <div
+      className="text-content font-bold text-xs text-center"
+    >
+      A.K.A.
     </div>
-    <div className="">{member.description}</div>
+    <div className="text-xl font-bold">{member.login}</div>
+      <div
+        className={cn(
+          "flex flex-wrap items-center justify-center mt-2 gap-1"
+        )}
+      >
+      {member.roles.map((role, index) => {
+        return (
+          <span key={index} className="badge badge-primary rounded-full">
+            {role}
+          </span>
+        )
+      })}
+      </div>
+    <blockquote
+      className="text-sm text-center bg-base-100 border-l-4 border-primary border-solid rounded-lg px-4 py-2 mt-2 font-semibold"
+    >
+      {member.description}
+    </blockquote>
     <div className="flex flex-wrap items-center justify-center mt-2">
       {member.links.map((link, index) => (
         <Link

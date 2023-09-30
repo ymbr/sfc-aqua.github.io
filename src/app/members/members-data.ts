@@ -1,7 +1,7 @@
 export type TMember = {
   name: string
   login: string
-  role: string
+  roles: string[]
   imagePath: string
   description: string
   links: {
@@ -18,7 +18,7 @@ export type TMember = {
 const template: TMember = {
   name: "",
   login: "",
-  role: "",
+  roles: [""],
   imagePath: "",
   description: "",
   links: [
@@ -40,7 +40,7 @@ export const members: TMember[] = [
   {
     name: "Rod Van Meter",
     login: "rdv",
-    role: "Chief AQUAnaut",
+    roles:["Chief AQUAnaut"],
     imagePath:
       "/images/members/rdv-kawaguchiko-2204-recropped-small-avatar.jpg",
     description: "Doing quantum since 2003",
@@ -69,7 +69,7 @@ export const members: TMember[] = [
   },
   {
     name: "Michal Hajdušek",
-    role: "Project Associate Professor",
+    roles: ["Project Associate Professor"],
     login: "michal",
     imagePath: "/images/members/michal.png",
     description: "Engineering is hard!",
@@ -89,7 +89,7 @@ export const members: TMember[] = [
   {
     name: "Amin Taherkhani",
     login: "amin",
-    role: "Research Assistant",
+    roles: ["Research Assistant"],
     imagePath: "/images/members/amin.jpg",
     description: "(|Classical\u27E9+|Quantum\u27E9)/\u221A2 Networking",
     links: [
@@ -110,13 +110,47 @@ export const members: TMember[] = [
     ],
   },
   {
-    name: "Poramet",
-    role: "D1",
-    login: "poramet",
-    imagePath: "/images/members/poramet.jpg",
-    description: "I'm a student at Keio University",
+    name: "Sara",
+    roles: ["D3", "Captain of USS AQUA"],
+    login: "sara",
+    imagePath: "/images/members/sara.png",
+    description: "To get out of here quickly",
     links: [
       { name: "Facebook", url: "" },
+      { name: "Github", url: "" },
+    ],
+    stat: [
+      { name: "Strength", value: 20, max: 100 },
+      { name: "Agility", value: 30, max: 100 },
+      { name: "Intelligence", value: 100, max: 100 },
+      { name: "Luck", value: 10, max: 100 },
+    ],
+  },
+  {
+    name: "Poramet Pathumsoot",
+    roles: ["D2", "Former Captain of USS AQUA"],
+    login: "poramet",
+    imagePath: "/images/members/poramet.jpg",
+    description: "To boldly go where no one has gone before",
+    links: [
+      { name: "Facebook", url: "" },
+      { name: "Github", url: "" },
+    ],
+    stat: [
+      { name: "Strength", value: 20, max: 100 },
+      { name: "Agility", value: 30, max: 100 },
+      { name: "Intelligence", value: 50, max: 100 },
+      { name: "Luck", value: 10, max: 100 },
+    ],
+  },
+  {
+    name: "Makoto Nakai",
+    roles: ["M2", "Communication Engineer"],
+    login: "dave",
+    imagePath: "/images/members/dave.png",
+    description: "Subspace communication is my life",
+    links: [
+      { name: "Linkedin", url: "" },
       { name: "Github", url: "" },
     ],
     stat: [

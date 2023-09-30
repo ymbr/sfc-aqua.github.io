@@ -44,7 +44,10 @@ export default function Page() {
             .filter(
               (member) =>
                 member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                member.role.toLowerCase().includes(searchQuery.toLowerCase())
+                member.login.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                member.roles.some((role) =>
+                  role.toLowerCase().includes(searchQuery.toLowerCase())
+                )
             )
             .map((member, index) => (
               <MemberCard key={index} member={member} />
