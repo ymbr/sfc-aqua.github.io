@@ -18,7 +18,7 @@ export default function Page() {
   }, [])
 
   return (
-    <div className="flex flex-col items-center justify-center w-full">
+    <div>
       {/* top section with image */}
       <div
         ref={containerRef}
@@ -46,10 +46,9 @@ export default function Page() {
             />
           </div>
         </div>
-
         <div
           className={cn(
-            "flex flex-wrap items-center justify-center mt-10 gap-4 "
+            "flex flex-wrap justify-center mt-10 gap-4"
           )}
         >
           {members
