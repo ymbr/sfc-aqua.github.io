@@ -46,11 +46,7 @@ export default function Page() {
             />
           </div>
         </div>
-        <div
-          className={cn(
-            "flex flex-wrap justify-center mt-10 gap-4"
-          )}
-        >
+        <div className={cn("flex flex-wrap justify-center mt-10 gap-4")}>
           {members
             .filter(
               (member) =>
